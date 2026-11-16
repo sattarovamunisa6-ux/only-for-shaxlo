@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160f20">
+<title>Only For Shaxlo ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:#fff;font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at 50% 25%,#49213f 0,#24142d 38%,#100d19 100%);display:flex;align-items:center;justify-content:center;padding:24px}
+.glow{position:fixed;width:280px;height:280px;border-radius:50%;filter:blur(90px);opacity:.28;pointer-events:none}
+.g1{background:#ff5b9b;top:-90px;left:-80px}.g2{background:#8d5bff;bottom:-100px;right:-80px}
+.card{width:min(100%,520px);text-align:center;position:relative;z-index:1;padding:42px 25px 34px;border:1px solid rgba(255,190,220,.25);border-radius:28px;background:rgba(20,12,28,.58);box-shadow:0 20px 80px rgba(0,0,0,.35);backdrop-filter:blur(12px)}
+.tiny{letter-spacing:4px;text-transform:uppercase;color:#f7b7d0;font:12px Arial,sans-serif}
+h1{font-size:clamp(34px,9vw,52px);font-weight:normal;margin:18px 0 12px}.pink{color:#ffb3d0}
+.sub{font-size:18px;line-height:1.6;color:#eadce8;margin:0 auto 28px;max-width:360px}
+.heart{font-size:54px;display:block;margin:15px 0 22px;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.14)}}
+button,.watch{display:inline-block;border:0;border-radius:999px;padding:16px 27px;background:linear-gradient(110deg,#ff78aa,#c17bff);color:#261126;font-weight:bold;font-size:16px;cursor:pointer;text-decoration:none;box-shadow:0 8px 28px #e45c9a55}
+#surprise{display:none;margin-top:30px;animation:appear .8s ease}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.message{font-size:clamp(22px,6vw,29px);line-height:1.5;color:#ffe1ec;margin:25px 0 20px}
+.note{font:13px Arial,sans-serif;color:#cbb9cc;line-height:1.6}
+.musicbox{margin:20px 0;padding:24px 15px;border-radius:20px;background:linear-gradient(145deg,#32182f,#171020);border:1px solid #74425f}
+.musicicon{font-size:42px;margin-bottom:12px}
+.footer{margin-top:26px;color:#bda9bf;font:11px Arial,sans-serif;letter-spacing:2px}
+.float{position:fixed;bottom:-30px;color:#ff9fc4;opacity:.45;animation:rise linear infinite;pointer-events:none}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<main class="card">
+  <div class="tiny">A little surprise</div>
+  <h1>Hey, <span class="pink">Shaxlo</span>...</h1>
+  <p class="sub">I have something to tell you.<br>And I wanted you to hear it in a special way.</p>
+  <span class="heart">❤️</span>
+  <button id="openBtn" type="button">Open your surprise</button>
+  <section id="surprise">
+    <p class="tiny">Just for you</p>
+    <div class="musicbox">
+      <div class="musicicon">🎵❤️</div>
+      <p class="sub">A song chosen for you</p>
+      <a class="watch" href="https://youtu.be/ZRTEs41ICXk" target="_blank" rel="noopener">▶ Play the song on YouTube</a>
+      <p class="note" style="margin-top:14px">Tap the button to listen. YouTube may open in the app or browser.</p>
+    </div>
+    <p class="message">If I could choose again,<br><span class="pink">I would still choose you.</span> ❤️</p>
+    <p class="note">Some feelings are better shown than explained.</p>
+  </section>
+  <div class="footer">MADE WITH ❤️ FOR SHAXLO</div>
+</main>
+<script>
+document.getElementById('openBtn').addEventListener('click',function(){
+ document.getElementById('surprise').style.display='block';
+ this.textContent='Your surprise is open ❤️';
+ this.disabled=true;
+ document.getElementById('surprise').scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+for(let i=0;i<14;i++){const el=document.createElement('span');el.className='float';el.textContent='♥';el.style.left=(Math.random()*100)+'vw';el.style.animationDuration=(9+Math.random()*10)+'s';el.style.animationDelay=(-Math.random()*15)+'s';el.style.fontSize=(12+Math.random()*18)+'px';document.body.appendChild(el);}
+</script>
+</body>
+</html>
